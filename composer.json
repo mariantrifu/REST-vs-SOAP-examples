@@ -1,0 +1,12 @@
+{
+    "name": "mariantrifu/rest-vs-soap-examples",
+    "description": "REST vs SOAP examples",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Marian Trifu",
+            "email": "mariantrifu@gmail.com"
+        }
+    ],
+    "require": {}
+}
