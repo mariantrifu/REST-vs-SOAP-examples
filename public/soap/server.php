@@ -22,7 +22,7 @@ function getProducts(){
 }
 
 $options = [
-    'uri' => 'http://127.0.0.1:8080/soap/server.php',
+    'uri' => 'http://127.0.0.1:8000/soap/server.php',
     'soap_version' => SOAP_1_2
 ];
 $soap = new SoapServer(NULL, $options);
