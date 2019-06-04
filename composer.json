@@ -8,5 +8,13 @@
             "email": "mariantrifu@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "slim/slim": "^3.12",
+        "ramsey/uuid": "^3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    }
 }
