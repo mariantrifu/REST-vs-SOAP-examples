@@ -59,7 +59,7 @@ class Product implements \JsonSerializable
     public function jsonSerialize()
     {
         return [
-            'productId' => $this->getProductId(),
+            'productId' => $this->getProductId()->id(),
             'name' => $this->getName(),
             'description' => $this->getDescription()
         ];

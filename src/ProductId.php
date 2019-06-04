@@ -4,7 +4,7 @@ namespace App;
 
 use Ramsey\Uuid\Uuid;
 
-class ProductId implements \JsonSerializable
+class ProductId
 {
     /**
      * @var string
@@ -33,13 +33,4 @@ class ProductId implements \JsonSerializable
     {
         return $this->id();
     }
-
-    public function jsonSerialize()
-    {
-        return [
-            'id' => $this->id()
-        ];
-    }
-
-
 }

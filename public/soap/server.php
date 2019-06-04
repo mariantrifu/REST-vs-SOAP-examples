@@ -11,16 +11,22 @@ $service = new \App\ProductService($container[\App\ProductRepository::class]);
 
 function getProducts(){
     global $service;
-    return $service->getAll();
+
+    $products = $service->getAll();
+
+    $p = [];
+    foreach ($products->getProducts() as $product)
+        $p[] = $product->jsonSerialize();
+
+    return $p;
 }
 
 $options = [
-    'uri' => 'http://127.0.0.1:8080/soap/server.php'
+    'uri' => 'http://127.0.0.1:8080/soap/server.php',
+    'soap_version' => SOAP_1_2
 ];
 $soap = new SoapServer(NULL, $options);
 
 $soap->addFunction('getProducts');
-//$soap->setObject($service);
 
 $soap->handle();
-
