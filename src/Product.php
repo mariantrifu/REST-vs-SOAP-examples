@@ -56,6 +56,11 @@ class Product implements \JsonSerializable
         return $this->description;
     }
 
+    public function toArray()
+    {
+        return $this->jsonSerialize();
+    }
+
     public function jsonSerialize()
     {
         return [

@@ -16,7 +16,7 @@ function getProducts(){
 
     $p = [];
     foreach ($products->getProducts() as $product)
-        $p[] = $product->jsonSerialize();
+        $p[] = $product->toArray();
 
     return $p;
 }
